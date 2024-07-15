@@ -14,7 +14,8 @@ public class Main {
             }
         }
 
-        int result = gcd * (n/gcd) * (m/gcd);
+        // int result = gcd * (n/gcd) * (m/gcd);
+        int result = n * m / gcd;
         System.out.println(result);
     }
 }
