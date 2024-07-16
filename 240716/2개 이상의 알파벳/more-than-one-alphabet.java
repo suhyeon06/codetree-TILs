@@ -11,16 +11,15 @@ public class Main {
             alpha[s.charAt(i)-'a']++;
         }
 
-        boolean result = false;
+        int cnt = 0;
 
         for(int i = 0; i < alpha.length; i++) {
-            if(alpha[i] > 1) {
-                result = true;
-                break;
+            if(alpha[i] > 0) {
+                cnt++;
             }
         }
 
-        System.out.println(result ? "Yes" : "No");
+        System.out.println(cnt >= 2 ? "Yes" : "No");
 
     }
 }
