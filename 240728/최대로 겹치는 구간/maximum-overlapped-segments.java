@@ -14,6 +14,9 @@ public class Main {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
+            a += 100;
+            b += 100;
+
             for(int j = a; j < b; j++) {
                 arr[j]++;
             }
