@@ -37,10 +37,12 @@ public class Main {
         int minY = Integer.MAX_VALUE;
         int maxX = Integer.MIN_VALUE;
         int maxY = Integer.MIN_VALUE;
+        int cnt = 0;
 
         for(int i = 0; i < arr.length; i++) {
             for(int j = 0; j < arr[i].length; j++) {
                 if(arr[i][j] == 1) {
+                    cnt++;
                     if (i < minX) minX = i;
                     if (i > maxX) maxX = i;
                     if (j < minY) minY = j;
@@ -49,9 +51,14 @@ public class Main {
             }
         }
 
-        int width = maxX - minX + 1;
-        int height = maxY - minY + 1;
+        if(cnt == 0) {
+            System.out.println(0);
+        } else {
+            int width = maxX - minX + 1;
+            int height = maxY - minY + 1;
+            System.out.println(width * height);
+        }
 
-        System.out.println(width * height);
+
     }
 }
